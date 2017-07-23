@@ -5,6 +5,7 @@ from lxml import etree
 from multiprocessing.dummy import Pool
 import os
 import sys
+import json
 reload(sys)
 sys.setdefaultencoding('utf8')
 
@@ -55,6 +56,10 @@ for each in tr:
     }
     cj.append(cj_c)
     print "课程名称:"+tds[5].text, "成绩:"+tds[6].text,"学分:"+tds[11].text
+print cj
+x = json.loads('{"foo":"%s"}' % cj)
+x0=x['foo']
+print(x0)
     # print(tds)
     # for td in tds:
     #     print(td)
