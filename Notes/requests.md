@@ -1,1 +1,0 @@
-使用requests库时报SSL错误可以`requests.get(url,verify=False)`来关闭验证
